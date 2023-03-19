@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e1531d9d-c3d0-4bdb-8ffc-fd8039979f18"
+      }
+    },
+    "owner": "saptak_op"
   }
 }
