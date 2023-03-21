@@ -1,6 +1,6 @@
 import React from "react";
 import dayjs from "dayjs";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
@@ -15,7 +15,7 @@ export default function ChatListItem({ chat: { id, user, lastMessage } }) {
         }}
       />
 
-      <View className="theContent flex-1 border-b-[0.4px] border-[#d3d3d3]">
+      <View style={styles.theContent} className="flex-1 border-[#d3d3d3]">
         <View className="theRow flex flex-row mb-[5px]">
           <Text numberOfLines={1} className="theName flex-1 font-bold">
             {user.name}
@@ -32,3 +32,9 @@ export default function ChatListItem({ chat: { id, user, lastMessage } }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  theContent: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
