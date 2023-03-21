@@ -12,7 +12,7 @@ export default function Message({ message: { id, text, createdAt, user } }) {
 
   return (
     <View
-      className={`theContainer bg-white m-[5px] p-[10px] rounded-[10px] max-w-[80%] self-start ${
+      className={`theContainer bg-white m-[5px] p-[10px] rounded-[10px] max-w-[80%] self-start shadow-md ${
         isMyMessage() && "bg-[#DCF8C5] self-end"
       }`}
     >
