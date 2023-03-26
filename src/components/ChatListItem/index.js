@@ -15,7 +15,10 @@ export default function ChatListItem({ chat: { id, user, lastMessage } }) {
         }}
       />
 
-      <View style={styles.theContent} className="flex-1 border-[#d3d3d3]">
+      <View
+        style={{ borderBottomWidth: StyleSheet.hairlineWidth }}
+        className="theContent flex-1 border-[#d3d3d3]"
+      >
         <View className="theRow flex flex-row mb-[5px]">
           <Text numberOfLines={1} className="theName flex-1 font-bold">
             {user.name}
@@ -32,9 +35,3 @@ export default function ChatListItem({ chat: { id, user, lastMessage } }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  theContent: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-});
